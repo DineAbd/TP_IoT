@@ -26,10 +26,19 @@ class Bibliotheque:
     def ajouterLivre(self, livre):
         self.collection.append(livre)
         
+    def inventaireLivre (self):
+        for livre in self.collection:
+            print(livre.titre)   
+    
+     
         
         
 bibliotheque = Bibliotheque()
 bibliotheque.ajouterLivre(livre2)
-resultat = bibliotheque.emprunter_livre(livre2)
+bibliotheque.emprunter_livre(livre1)
+bibliotheque.emprunter_livre(livre2)
+bibliotheque.inventaireLivre()
+
+
         
     
