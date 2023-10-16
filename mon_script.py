@@ -2,6 +2,10 @@ class Livre:
     def __init__(self, titre, auteur):
         self.titre = titre
         self.auteur = auteur
+    
+    def getTitre(self):
+        return self.titre
+    
 
 class Auteur:
     def __init__(self, nom):
@@ -28,16 +32,17 @@ class Bibliotheque:
         
     def inventaireLivre (self):
         for livre in self.collection:
-            print(livre.titre)   
+            print(livre.getTitre())   
     
      
         
         
 bibliotheque = Bibliotheque()
 bibliotheque.ajouterLivre(livre2)
+bibliotheque.inventaireLivre()
 bibliotheque.emprunter_livre(livre1)
 bibliotheque.emprunter_livre(livre2)
-bibliotheque.inventaireLivre()
+
 
 
         
